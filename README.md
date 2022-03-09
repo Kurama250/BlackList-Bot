@@ -1,4 +1,4 @@
-BOT INSTALLATION
+TUTO d'installation du BOT
 
 ```
 Commande pour Linux :
