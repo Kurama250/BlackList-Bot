@@ -1,0 +1,17 @@
+{
+  "name": "BlackList",
+  "version": "1.0.0",
+  "description": "BlackList BOT by Kurama",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main"
+  },
+  "author": "Kurama",
+  "license": "Kurama",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js": "^12.2.0",
+    "moment": "^2.27.0",
+    "mysql2": "^2.1.0"
+  }
+}
