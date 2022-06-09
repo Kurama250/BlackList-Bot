@@ -18,7 +18,7 @@ class Staff extends Command {
         let staff = client.bdd.query(`SELECT * FROM user_staff WHERE user_id = ?`, [message.author.id]);
         if (staff) {
             if (args[1] === "add") {
-                let member = message.mentions.members.first() || message.guild.members.cache.get(args[2]) || message.member;
+                let member = message.mentions.members.first() || message.guild.members.cache.get(args[2]);
                 if (!member) return message.channel.send("Mentionne ou note son ID.");
                 let reason = args[3].slice(" ");
                 if(!reason) return message.channel.send("Note la raison s'il te plait.");
@@ -37,7 +37,7 @@ class Staff extends Command {
                     console.log(err)
                 }
             } else if (args[1] === "remove") {
-                let member = message.mentions.members.first() || message.guild.members.cache.get(args[2]) || message.member;
+                let member = message.mentions.members.first() || message.guild.members.cache.get(args[2]);
                 if (!member) return message.channel.send("Mentionne ou note son ID.");
                 try {
                     client.bdd.query("SELECT * FROM user_blacklist WHERE user_id = ?", [member.id], function (err, result) {
